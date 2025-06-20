@@ -1,0 +1,128 @@
+{
+  "common": {
+    "language": "语言",
+    "english": "English",
+    "chinese": "中文",
+    "menu": "菜单",
+    "close": "关闭"
+  },
+  "navigation": {
+    "features": "功能特性",
+    "playground": "交互体验",
+    "docs": "技术文档",
+    "resources": "学习资源", 
+    "servers": "MCP 服务器",
+    "blog": "技术博客",
+    "faq": "常见问题",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "title": "让 AI 上下文理解成为可能",
+    "subtitle": "赋能 AI 应用进入 MCP 标准化时代，实现上下文、协议与模型的真正协作",
+    "tryPlayground": "体验演示",
+    "readDocs": "阅读文档"
+  },
+  "features": {
+    "title": "MCP 核心能力",
+    "subtitle": "探索构成 MCP 成为 AI 上下文管理未来的三大基础支柱",
+    "contextStandardization": {
+      "title": "上下文标准化",
+      "description": "建立统一的上下文协议，实现不同 AI 模型和应用之间的无缝通信，确保跨平台的一致理解。"
+    },
+    "multiModelCollaboration": {
+      "title": "多模型协作", 
+      "description": "通过标准化接口实现多个 AI 模型的动态协作，允许复杂任务在专业化模型能力间分布执行。"
+    },
+    "serverArchitecture": {
+      "title": "服务器架构",
+      "description": "部署可扩展的 MCP 服务器，管理上下文、处理协议通信，并以企业级可靠性编排 AI 模型交互。"
+    }
+  },
+  "playground": {
+    "title": "MCP 交互体验",
+    "subtitle": "通过我们的交互式演示体验 MCP 的强大功能。上传文档、配置上下文，选择模型来观看 MCP 的实际运作。",
+    "documentUpload": {
+      "title": "文档上传",
+      "description": "上传和处理各种文档格式，为 AI 模型建立丰富的上下文"
+    },
+    "contextConfiguration": {
+      "title": "上下文配置", 
+      "description": "设置和管理上下文参数，优化 AI 模型性能和理解能力"
+    },
+    "modelSelection": {
+      "title": "模型选择",
+      "description": "从多个 AI 模型中选择，并为复杂任务配置协作模式"
+    },
+    "launchPlayground": "启动演示"
+  },
+  "documentation": {
+    "title": "技术文档",
+    "subtitle": "涵盖 MCP 协议结构、服务器架构和 API 实现细节的全面指南",
+    "quickStart": {
+      "title": "快速开始",
+      "description": "通过我们的分步指南在几分钟内开始使用 MCP"
+    },
+    "protocolSpec": {
+      "title": "协议规范",
+      "description": "完整的 MCP 协议文档和标准"
+    },
+    "serverDevelopment": {
+      "title": "服务器开发",
+      "description": "构建和部署您自己的 MCP 服务器"
+    },
+    "apiReference": {
+      "title": "API 参考",
+      "description": "所有 MCP 端点的详细 API 文档"
+    },
+    "examples": {
+      "title": "代码示例",
+      "description": "真实世界的示例和实现模式"
+    },
+    "bestPractices": {
+      "title": "最佳实践",
+      "description": "MCP 实现的专家建议"
+    }
+  },
+  "resources": {
+    "title": "MCP 学习资源",
+    "subtitle": "学习和实现模型上下文协议的全面资源集合",
+    "officialDocs": {
+      "title": "官方文档",
+      "description": "来自 MCP 社区的权威资源"
+    },
+    "platformGuides": {
+      "title": "平台指南", 
+      "description": "主要 AI 平台的实现指南"
+    },
+    "communityResources": {
+      "title": "社区资源",
+      "description": "来自社区的教程、文章和讨论"
+    },
+    "viewResource": "查看资源",
+    "externalLink": "外部链接"
+  },
+  "servers": {
+    "title": "MCP 服务器",
+    "subtitle": "发现和探索可用的 MCP 服务器及其功能",
+    "serverDirectory": {
+      "title": "服务器目录", 
+      "description": "浏览 MCP 服务器的综合目录"
+    },
+    "communityServers": {
+      "title": "社区服务器",
+      "description": "由社区构建和维护的服务器"
+    },
+    "discussions": {
+      "title": "社区讨论",
+      "description": "加入关于 MCP 实现和使用的对话"
+    },
+    "exploreServers": "探索服务器"
+  },
+  "footer": {
+    "description": "通过标准化协议和协作架构让 AI 上下文理解成为可能。",
+    "quickLinks": "快捷链接",
+    "resources": "学习资源", 
+    "community": "社区",
+    "copyright": "© 2025 AIMCP. 保留所有权利。"
+  }
+} 

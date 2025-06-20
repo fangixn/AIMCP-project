@@ -1,0 +1,128 @@
+{
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "chinese": "中文",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "navigation": {
+    "features": "Features",
+    "playground": "Playground",
+    "docs": "Documentation",
+    "resources": "Resources", 
+    "servers": "MCP Servers",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Making AI Context Understanding Possible",
+    "subtitle": "Empowering AI applications to enter the MCP standard era, enabling true collaboration between context, protocols, and models",
+    "tryPlayground": "Try Playground",
+    "readDocs": "Read Documentation"
+  },
+  "features": {
+    "title": "Core MCP Capabilities",
+    "subtitle": "Discover the three foundational pillars that make MCP the future of AI context management",
+    "contextStandardization": {
+      "title": "Context Standardization",
+      "description": "Establish unified context protocols that enable seamless communication between different AI models and applications, ensuring consistent understanding across platforms."
+    },
+    "multiModelCollaboration": {
+      "title": "Multi-Model Collaboration", 
+      "description": "Enable dynamic collaboration between multiple AI models through standardized interfaces, allowing complex tasks to be distributed across specialized model capabilities."
+    },
+    "serverArchitecture": {
+      "title": "Server Architecture",
+      "description": "Deploy scalable MCP servers that manage context, handle protocol communications, and orchestrate AI model interactions with enterprise-grade reliability."
+    }
+  },
+  "playground": {
+    "title": "MCP Playground",
+    "subtitle": "Experience the power of MCP with our interactive playground. Upload documents, configure context, and select models to see MCP in action.",
+    "documentUpload": {
+      "title": "Document Upload",
+      "description": "Upload and process various document formats to establish rich context for AI models"
+    },
+    "contextConfiguration": {
+      "title": "Context Configuration", 
+      "description": "Set up and manage context parameters to optimize AI model performance and understanding"
+    },
+    "modelSelection": {
+      "title": "Model Selection",
+      "description": "Choose from multiple AI models and configure collaboration patterns for complex tasks"
+    },
+    "launchPlayground": "Launch Playground"
+  },
+  "documentation": {
+    "title": "Technical Documentation",
+    "subtitle": "Comprehensive guides covering MCP protocol structure, server architecture, and API implementation details",
+    "quickStart": {
+      "title": "Quick Start Guide",
+      "description": "Get started with MCP in minutes with our step-by-step guide"
+    },
+    "protocolSpec": {
+      "title": "Protocol Specification",
+      "description": "Complete MCP protocol documentation and standards"
+    },
+    "serverDevelopment": {
+      "title": "Server Development",
+      "description": "Build and deploy your own MCP servers"
+    },
+    "apiReference": {
+      "title": "API Reference",
+      "description": "Detailed API documentation for all MCP endpoints"
+    },
+    "examples": {
+      "title": "Code Examples",
+      "description": "Real-world examples and implementation patterns"
+    },
+    "bestPractices": {
+      "title": "Best Practices",
+      "description": "Expert recommendations for MCP implementation"
+    }
+  },
+  "resources": {
+    "title": "MCP Resources",
+    "subtitle": "Comprehensive collection of resources to learn and implement Model Context Protocol",
+    "officialDocs": {
+      "title": "Official Documentation",
+      "description": "Authoritative resources from the MCP community"
+    },
+    "platformGuides": {
+      "title": "Platform Guides", 
+      "description": "Implementation guides for major AI platforms"
+    },
+    "communityResources": {
+      "title": "Community Resources",
+      "description": "Tutorials, articles, and discussions from the community"
+    },
+    "viewResource": "View Resource",
+    "externalLink": "External Link"
+  },
+  "servers": {
+    "title": "MCP Servers",
+    "subtitle": "Discover and explore available MCP servers and their capabilities",
+    "serverDirectory": {
+      "title": "Server Directory", 
+      "description": "Browse the comprehensive directory of MCP servers"
+    },
+    "communityServers": {
+      "title": "Community Servers",
+      "description": "Servers built and maintained by the community"
+    },
+    "discussions": {
+      "title": "Community Discussions",
+      "description": "Join conversations about MCP implementation and usage"
+    },
+    "exploreServers": "Explore Servers"
+  },
+  "footer": {
+    "description": "Making AI context understanding possible through standardized protocols and collaborative architectures.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources", 
+    "community": "Community",
+    "copyright": "© 2025 AIMCP. All rights reserved."
+  }
+} 
