@@ -2,7 +2,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "regions": ["sin1", "hkg1"],
+  "regions": ["iad1"],
   "functions": {
     "app/[locale]/page.tsx": {
       "maxDuration": 30
