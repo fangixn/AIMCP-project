@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import { ChevronDown, Code, Database, Zap, FileText, Users, Mail, Github, Twitter, ExternalLink, Menu, X, Play, BookOpen, MessageSquare, HelpCircle, Globe } from 'lucide-react';
+import { ChevronDown, Code, Database, Zap, FileText, Users, ExternalLink, Menu, X, Play, BookOpen, MessageSquare, HelpCircle, Globe } from 'lucide-react';
 import LanguageSwitcher from '../../components/LanguageSwitcher';
 
 export default function Home() {
@@ -55,9 +55,6 @@ export default function Home() {
               <button onClick={() => scrollToSection('servers')} className="text-gray-300 hover:text-white transition-colors">
                 {t('navigation.servers')}
               </button>
-              <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors">
-                {t('navigation.contact')}
-              </button>
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -89,9 +86,6 @@ export default function Home() {
                 </button>
                 <button onClick={() => scrollToSection('servers')} className="text-gray-300 hover:text-white transition-colors text-left">
                   {t('navigation.servers')}
-                </button>
-                <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-white transition-colors text-left">
-                  {t('navigation.contact')}
                 </button>
               </nav>
             </div>
@@ -443,28 +437,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('navigation.contact')}</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-            {t('footer.description')}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <a href="https://github.com/modelcontextprotocol" target="_blank" rel="noopener noreferrer"
-               className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 border border-gray-600">
-              <Github className="h-5 w-5" />
-              <span>GitHub</span>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2">
-              <Twitter className="h-5 w-5" />
-              <span>Twitter</span>
-            </a>
-          </div>
-        </div>
-      </section>
+
 
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-gray-800">

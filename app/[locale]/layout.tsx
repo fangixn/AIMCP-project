@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -56,6 +57,20 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="scroll-smooth">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-82BFBMWNFV"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-82BFBMWNFV');
+          `}
+        </Script>
+      </head>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
           {children}

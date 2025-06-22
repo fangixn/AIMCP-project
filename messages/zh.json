@@ -13,8 +13,7 @@
     "resources": "学习资源", 
     "servers": "MCP 服务器",
     "blog": "技术博客",
-    "faq": "常见问题",
-    "contact": "联系我们"
+    "faq": "常见问题"
   },
   "hero": {
     "title": "让 AI 上下文理解成为可能",

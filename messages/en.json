@@ -13,8 +13,7 @@
     "resources": "Resources", 
     "servers": "MCP Servers",
     "blog": "Blog",
-    "faq": "FAQ",
-    "contact": "Contact"
+    "faq": "FAQ"
   },
   "hero": {
     "title": "Making AI Context Understanding Possible",
