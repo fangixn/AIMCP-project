@@ -1,12 +1,41 @@
 {
-  "name": "nextjs",
-  "version": "0.1.0",
+  "name": "aimcp-web",
+  "version": "1.0.0",
+  "description": "A comprehensive MCP (Model Context Protocol) resource website with bilingual support and intelligent resource collection tools",
   "private": true,
+  "keywords": [
+    "MCP",
+    "Model Context Protocol",
+    "AI",
+    "Claude",
+    "Anthropic",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Bilingual",
+    "Resource Collection",
+    "Documentation"
+  ],
+  "homepage": "https://aimcpweb.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/aimcp-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/aimcp-web/issues"
+  },
+  "author": {
+    "name": "AIMCP Team",
+    "email": "contact@aimcpweb.com",
+    "url": "https://aimcpweb.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "export": "next export"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

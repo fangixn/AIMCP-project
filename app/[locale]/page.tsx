@@ -192,7 +192,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
+            <Link href="/docs" className="block bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group cursor-pointer">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Play className="h-6 w-6 text-white" />
               </div>
@@ -200,9 +200,9 @@ export default function Home() {
               <p className="text-gray-300 text-sm leading-relaxed">
                 {t('documentation.quickStart.description')}
               </p>
-            </div>
+            </Link>
 
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 group">
+            <Link href="/docs" className="block bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 group cursor-pointer">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <FileText className="h-6 w-6 text-white" />
               </div>
@@ -210,9 +210,9 @@ export default function Home() {
               <p className="text-gray-300 text-sm leading-relaxed">
                 {t('documentation.protocolSpec.description')}
               </p>
-            </div>
+            </Link>
 
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
+            <Link href="/docs" className="block bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group cursor-pointer">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Code className="h-6 w-6 text-white" />
               </div>
@@ -220,9 +220,9 @@ export default function Home() {
               <p className="text-gray-300 text-sm leading-relaxed">
                 {t('documentation.serverDevelopment.description')}
               </p>
-            </div>
+            </Link>
 
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300 group">
+            <Link href="/docs" className="block bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300 group cursor-pointer">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <BookOpen className="h-6 w-6 text-white" />
               </div>
@@ -230,9 +230,9 @@ export default function Home() {
               <p className="text-gray-300 text-sm leading-relaxed">
                 {t('documentation.apiReference.description')}
               </p>
-            </div>
+            </Link>
 
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 group">
+            <Link href="/docs" className="block bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-yellow-500 transition-all duration-300 group cursor-pointer">
               <div className="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Users className="h-6 w-6 text-white" />
               </div>
@@ -240,9 +240,9 @@ export default function Home() {
               <p className="text-gray-300 text-sm leading-relaxed">
                 {t('documentation.examples.description')}
               </p>
-            </div>
+            </Link>
 
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 group">
+            <Link href="/docs" className="block bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-indigo-500 transition-all duration-300 group cursor-pointer">
               <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <HelpCircle className="h-6 w-6 text-white" />
               </div>
@@ -250,7 +250,7 @@ export default function Home() {
               <p className="text-gray-300 text-sm leading-relaxed">
                 {t('documentation.bestPractices.description')}
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -269,14 +269,14 @@ export default function Home() {
                 className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
               >
                 <BookOpen className="h-5 w-5 mr-2" />
-                查看完整资源库
+                {t('resources.viewResource')}
               </Link>
               <button
                 onClick={() => scrollToSection('playground')}
                 className="inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
               >
                 <Code className="h-5 w-5 mr-2" />
-                使用资源收集工具
+                {t('playground.launchPlayground')}
               </button>
             </div>
           </div>
@@ -458,13 +458,13 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">{t('footer.resources')}</h3>
               <div className="space-y-2">
                 <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors">
-                  Official Docs
+                  {t('navigation.docs')}
                 </a>
                 <a href="https://github.com/modelcontextprotocol" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors">
                   GitHub
                 </a>
                 <a href="https://mcp.so" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white transition-colors">
-                  Server Directory
+                  {t('servers.serverDirectory.title')}
                 </a>
               </div>
             </div>

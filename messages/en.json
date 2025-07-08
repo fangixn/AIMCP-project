@@ -2,7 +2,7 @@
   "common": {
     "language": "Language",
     "english": "English",
-    "chinese": "中文",
+    "chinese": "Chinese",
     "menu": "Menu",
     "close": "Close"
   },
@@ -52,7 +52,260 @@
       "title": "Model Selection",
       "description": "Choose from multiple AI models and configure collaboration patterns for complex tasks"
     },
-    "launchPlayground": "Launch Playground"
+    "launchPlayground": "Launch Playground",
+    "collector": {
+      "tabs": {
+        "collector": "Resource Collector",
+        "results": "Collection Results",
+        "stats": "Analytics",
+        "favorites": "My Favorites"
+      },
+      "keywords": {
+        "label": "Search Keywords (comma separated)",
+        "placeholder": "Enter custom keywords, leave empty to use defaults"
+      },
+      "options": {
+        "label": "Collection Options",
+        "includeGithub": "Include GitHub Project Search"
+      },
+      "buttons": {
+        "startCollection": "Start Collection",
+        "collecting": "Collecting...",
+        "viewDetailedReport": "View Detailed Report",
+        "exportJson": "Export JSON",
+        "exportCsv": "Export CSV"
+      },
+      "progress": {
+        "step": "Step",
+        "collected": "Collected",
+        "resources": "resources",
+        "current": "Current"
+      },
+      "success": {
+        "title": "Collection Complete!",
+        "message": "Found {count} MCP resources, please check the collection results below."
+      },
+      "bestPractices": {
+        "title": "MCP Agent Best Practices & Learning Path",
+        "learningPath": {
+          "title": "📚 Recommended Learning Path",
+          "beginner": {
+            "title": "Understanding Basics",
+            "duration": "Estimated 3-5 days",
+            "subtitle": "MCP Quick Start",
+            "step1": "Day 1: Read official documentation basics",
+            "step2": "Day 2: Install Python SDK and run first example",
+            "step3": "Day 3: Configure Claude Desktop integration",
+            "step4": "Day 4-5: Try filesystem server"
+          },
+          "intermediate": {
+            "title": "Hands-on Practice",
+            "duration": "Estimated 1-2 weeks",
+            "subtitle": "Custom Server Development",
+            "step1": "Week 1: Deep dive into MCP protocol specification",
+            "step2": "Study multiple server implementation cases",
+            "step3": "Week 2: Develop your first custom server",
+            "step4": "Integrate external APIs and databases"
+          },
+          "advanced": {
+            "title": "Building Applications",
+            "duration": "Continuous learning",
+            "subtitle": "Ecosystem Contribution",
+            "step1": "Build enterprise-grade MCP solutions",
+            "step2": "Contribute code to open source community",
+            "step3": "Write tutorials and best practice documentation",
+            "step4": "Participate in protocol standard development"
+          }
+        },
+        "useCases": {
+          "title": "🛠️ Real-world Use Cases",
+          "fileManager": {
+            "title": "File Management Assistant",
+            "description": "Use filesystem server to let Claude help you manage local files",
+            "tags": {
+              "beginner": "Beginner Friendly",
+              "official": "Official Example"
+            }
+          },
+          "codeAnalysis": {
+            "title": "Code Repository Analysis",
+            "description": "Connect Git repositories for Claude to analyze code structure and history",
+            "tags": {
+              "intermediate": "Intermediate",
+              "devTool": "Development Tool"
+            }
+          },
+          "dbHelper": {
+            "title": "Database Query Assistant",
+            "description": "Connect PostgreSQL to have Claude help you write complex SQL queries",
+            "tags": {
+              "advanced": "Advanced",
+              "dataAnalysis": "Data Analysis"
+            }
+          },
+          "apiHub": {
+            "title": "API Integration Hub",
+            "description": "Create unified interface for Claude to access multiple third-party APIs",
+            "tags": {
+              "enterprise": "Enterprise",
+              "integration": "Integration Solution"
+            }
+          }
+        },
+        "tips": {
+          "title": "💡 Development Tips & Considerations",
+          "bestPractices": {
+            "title": "Best Practices",
+            "tip1": "Always validate input parameter validity",
+            "tip2": "Provide clear error messages and logging",
+            "tip3": "Use type hints to improve code quality",
+            "tip4": "Implement proper permissions and security checks",
+            "tip5": "Write unit tests covering core functionality",
+            "tip6": "Follow official naming and structure conventions"
+          },
+          "pitfalls": {
+            "title": "Common Pitfalls",
+            "tip1": "Don't store sensitive information in servers",
+            "tip2": "Avoid blocking operations that affect response performance",
+            "tip3": "Pay attention to large file handling and memory usage",
+            "tip4": "Ensure cross-platform compatibility",
+            "tip5": "Don't ignore version compatibility issues",
+            "tip6": "Avoid overly complex nested structures"
+          }
+        },
+        "priorityResources": {
+          "title": "🌟 Priority Learning Resources",
+          "officialDocs": {
+            "title": "Official Documentation",
+            "description": "Authoritative, comprehensive, timely updates"
+          },
+          "pythonSdk": {
+            "title": "Python SDK",
+            "description": "Most mature development tool"
+          },
+          "fileSystemExample": {
+            "title": "Filesystem Example",
+            "description": "Best starting point"
+          }
+        }
+      },
+      "faq": {
+        "title": "MCP Agent FAQ",
+        "questions": {
+          "whatIsMcp": {
+            "question": "What is Model Context Protocol (MCP)?",
+            "answer": "MCP is an open protocol developed by Anthropic that allows AI assistants to securely access external data and tools. It establishes standardized connection methods, enabling AI like Claude to interact with various services and data sources."
+          },
+          "skillsRequired": {
+            "question": "What skills do I need to start using MCP?",
+            "answer": "Basic usage only requires software installation and documentation reading skills. For custom server development, basic Python or TypeScript knowledge is recommended. Most tutorials provide detailed step-by-step instructions."
+          },
+          "systemRequirements": {
+            "question": "What environment do MCP servers need to run?",
+            "answer": "Most MCP servers can run locally, supporting Windows, macOS, and Linux. Python servers require Python 3.10+, TypeScript servers require Node.js 18+."
+          },
+          "claudeIntegration": {
+            "question": "How to integrate with Claude Desktop?",
+            "answer": "You need to modify Claude Desktop's configuration file to add MCP server information. Specific paths: Windows at %APPDATA%/Claude/, macOS at ~/Library/Application Support/Claude/."
+          },
+          "security": {
+            "question": "Is MCP secure? Will it leak data?",
+            "answer": "MCP is designed with strict permission control mechanisms. Servers can only access explicitly authorized resources, and AI cannot directly execute system commands. However, it's still recommended not to expose sensitive data in production environments."
+          },
+          "troubleshooting": {
+            "question": "How to troubleshoot when encountering problems?",
+            "answer": "First check server logs and Claude Desktop connection status. Most issues are caused by configuration errors or missing dependencies. GitHub Issues and community forums have many solutions."
+          }
+        },
+        "quickLinks": {
+          "title": "🔗 Quick Links",
+          "quickStart": "Official Quick Start",
+          "serverExamples": "Official Server Examples",
+          "pythonSdk": "Python SDK",
+          "typescriptSdk": "TypeScript SDK"
+        }
+      },
+      "results": {
+        "noResults": {
+          "title": "No collection results yet, please start collecting first",
+          "subtitle": "No resources match the filter criteria"
+        },
+        "filterAll": "All",
+        "priority": {
+          "high": "High",
+          "medium": "Medium", 
+          "low": "Low",
+          "label": "Priority"
+        },
+        "rating": "Rating"
+      },
+      "stats": {
+        "learningAdvice": {
+          "title": "Learning Recommendations Based on Collection Results",
+          "insights": {
+            "title": "📊 Data Insights",
+            "totalResources": "Collected {count} related resources",
+            "typesCount": "Covering {count} different types",
+            "languagesCount": "Supporting {count} languages",
+            "sourcesCount": "From {count} different sources"
+          },
+          "recommendations": {
+            "title": "🎯 Learning Focus",
+            "documentation": "Prioritize reading {count} official documents",
+            "tutorial": "Follow {count} tutorials for practice",
+            "tool": "Try using {count} development tools",
+            "example": "Study {count} practical examples"
+          }
+        },
+        "personalizedPlan": {
+          "title": "AI-Generated Personalized Learning Plan",
+          "beginnerPath": "Beginner Path",
+          "intermediatePath": "Intermediate Path",
+          "expertPath": "Expert Path"
+        },
+        "toolbox": {
+          "title": "Developer Utility Toolbox",
+          "codeGenerator": {
+            "title": "Code Generator",
+            "description": "Quickly generate MCP server skeleton code based on templates"
+          },
+          "debugHelper": {
+            "title": "Debug Assistant",
+            "description": "Real-time monitoring of MCP connection status and message flow"
+          },
+          "configManager": {
+            "title": "Configuration Manager",
+            "description": "Unified management of multiple MCP server configurations"
+          },
+          "deployTool": {
+            "title": "Deployment Tool",
+            "description": "One-click deployment to Docker, cloud services, and other platforms"
+          }
+        },
+        "distribution": {
+          "byType": "By Type",
+          "bySource": "By Source",
+          "byLanguage": "By Language",
+          "topTags": "Top Tags"
+        }
+      },
+      "favorites": {
+        "noFavorites": {
+          "title": "No favorite resources yet",
+          "subtitle": "Click the ⭐ button in collection results to favorite resources you like",
+          "startCollecting": "Start Collecting Resources"
+        },
+        "stats": {
+          "title": "My Favorite Resource Library",
+          "total": "Total Favorites",
+          "types": "Resource Types",
+          "sources": "Resource Sources",
+          "avgRating": "Average Rating"
+        },
+        "toggleFavorite": "Favorite",
+        "removeFavorite": "Remove Favorite"
+      }
+    }
   },
   "documentation": {
     "title": "Technical Documentation",
