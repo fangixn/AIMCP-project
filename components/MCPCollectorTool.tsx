@@ -112,6 +112,13 @@ const MCPCollectorTool: React.FC = () => {
         if (result.success) {
           setResources(result.data.resources);
           setStats(result.data.stats);
+          
+          // 保存数据到 localStorage 用于报告页面
+          localStorage.setItem('mcpCollectionData', JSON.stringify({
+            resources: result.data.resources,
+            stats: result.data.stats,
+            timestamp: new Date().toISOString()
+          }));
         }
       }
       
@@ -285,7 +292,16 @@ const MCPCollectorTool: React.FC = () => {
             </button>
             
             {resources.length > 0 && (
-              <div className="flex space-x-2">
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="/report"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                >
+                  <FileText className="w-4 h-4 mr-2" />
+                  查看详细报告
+                </a>
                 <button
                   onClick={() => exportData('json')}
                   className="flex items-center px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { ChevronDown, Code, Database, Zap, FileText, Users, ExternalLink, Menu, X, Play, BookOpen, MessageSquare, HelpCircle, Globe } from 'lucide-react';
+import Link from 'next/link';
 import LanguageSwitcher from '../../components/LanguageSwitcher';
 import MCPCollectorTool from '../../components/MCPCollectorTool';
 
@@ -47,12 +48,12 @@ export default function Home() {
               <button onClick={() => scrollToSection('playground')} className="text-gray-300 hover:text-white transition-colors">
                 {t('navigation.playground')}
               </button>
-              <button onClick={() => scrollToSection('docs')} className="text-gray-300 hover:text-white transition-colors">
+              <Link href="/docs" className="text-gray-300 hover:text-white transition-colors">
                 {t('navigation.docs')}
-              </button>
-              <button onClick={() => scrollToSection('resources')} className="text-gray-300 hover:text-white transition-colors">
+              </Link>
+              <Link href="/resources" className="text-gray-300 hover:text-white transition-colors">
                 {t('navigation.resources')}
-              </button>
+              </Link>
               <button onClick={() => scrollToSection('servers')} className="text-gray-300 hover:text-white transition-colors">
                 {t('navigation.servers')}
               </button>
@@ -79,12 +80,12 @@ export default function Home() {
                 <button onClick={() => scrollToSection('playground')} className="text-gray-300 hover:text-white transition-colors text-left">
                   {t('navigation.playground')}
                 </button>
-                <button onClick={() => scrollToSection('docs')} className="text-gray-300 hover:text-white transition-colors text-left">
+                <Link href="/docs" className="text-gray-300 hover:text-white transition-colors text-left">
                   {t('navigation.docs')}
-                </button>
-                <button onClick={() => scrollToSection('resources')} className="text-gray-300 hover:text-white transition-colors text-left">
+                </Link>
+                <Link href="/resources" className="text-gray-300 hover:text-white transition-colors text-left">
                   {t('navigation.resources')}
-                </button>
+                </Link>
                 <button onClick={() => scrollToSection('servers')} className="text-gray-300 hover:text-white transition-colors text-left">
                   {t('navigation.servers')}
                 </button>
@@ -111,13 +112,13 @@ export default function Home() {
               <Play className="h-5 w-5" />
               <span>{t('hero.tryPlayground')}</span>
             </button>
-            <button 
-              onClick={() => scrollToSection('docs')}
+            <Link 
+              href="/docs"
               className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 border border-gray-600"
             >
               <BookOpen className="h-5 w-5" />
               <span>{t('hero.readDocs')}</span>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -170,9 +171,9 @@ export default function Home() {
       <section id="playground" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">MCP 资源收集工具</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('playground.title')}</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              智能搜索和收集 MCP 相关资源，生成详细的分析报告
+              {t('playground.subtitle')}
             </p>
           </div>
 
@@ -259,9 +260,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('resources.title')}</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               {t('resources.subtitle')}
             </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/resources"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+              >
+                <BookOpen className="h-5 w-5 mr-2" />
+                查看完整资源库
+              </Link>
+              <button
+                onClick={() => scrollToSection('playground')}
+                className="inline-flex items-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+              >
+                <Code className="h-5 w-5 mr-2" />
+                使用资源收集工具
+              </button>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">

@@ -38,8 +38,8 @@
     }
   },
   "playground": {
-    "title": "MCP Playground",
-    "subtitle": "Experience the power of MCP with our interactive playground. Upload documents, configure context, and select models to see MCP in action.",
+    "title": "MCP Resource Collection Tool",
+    "subtitle": "Intelligently search and collect MCP-related resources, generating detailed analysis reports",
     "documentUpload": {
       "title": "Document Upload",
       "description": "Upload and process various document formats to establish rich context for AI models"
@@ -123,5 +123,105 @@
     "resources": "Resources", 
     "community": "Community",
     "copyright": "© 2025 AIMCP. All rights reserved."
+  },
+  "docs": {
+    "title": "Technical Documentation",
+    "subtitle": "Complete technical guide for AIMCP project",
+    "navigation": "Documentation Navigation",
+    "gettingStarted": {
+      "title": "Getting Started",
+      "subtitle": "Follow these steps to quickly set up and run the AIMCP project",
+      "systemRequirements": "System Requirements",
+      "installationSteps": "Installation Steps",
+      "step1": "1. Clone the repository:",
+      "step2": "2. Install dependencies:",
+      "step3": "3. Start development server:",
+      "step4": "4. Open in browser:",
+      "requirements": {
+        "nodejs": "Node.js 18.0 or higher",
+        "npm": "npm or yarn package manager",
+        "git": "Git version control",
+        "browser": "Modern browser (Chrome, Firefox, Safari, Edge)"
+      }
+    },
+    "architecture": {
+      "title": "Project Architecture",
+      "subtitle": "Understand the technical architecture and component design of AIMCP project",
+      "techStack": "Tech Stack",
+      "directoryStructure": "Directory Structure",
+      "frontend": "Frontend Framework",
+      "uiComponents": "UI Components",
+      "i18n": "Internationalization",
+      "devTools": "Development Tools",
+      "i18nSupport": "Bilingual Support",
+      "dynamicRoutes": "Dynamic Routes"
+    },
+    "api": {
+      "title": "API Documentation",
+      "subtitle": "Detailed API interface descriptions and usage examples",
+      "mcpCollectApi": "MCP Resource Collection API",
+      "progressApi": "Progress Query API",
+      "startCollection": "Start MCP resource collection task",
+      "queryProgress": "Query collection task progress",
+      "requestParams": "Request Parameters:",
+      "responseExample": "Response Example:",
+      "queryParams": "Query Parameters:",
+      "taskStarted": "Collection task started",
+      "estimatedTime": "2-5 minutes",
+      "currentStep": "Collecting GitHub resources...",
+      "resourcesFound": "resources found",
+      "timeRemaining": "1 minute"
+    },
+    "components": {
+      "title": "Component Documentation",
+      "subtitle": "Usage guide for main React components in the project",
+      "mcpCollectorTool": "Main component for MCP resource collection tool",
+      "languageSwitcher": "Language switching component",
+      "features": "Features:",
+      "supportedLanguages": "Supported Languages:",
+      "usageExample": "Usage Example:",
+      "featuresList": {
+        "customKeywords": "Custom search keywords",
+        "realTimeProgress": "Real-time progress display",
+        "resourceFiltering": "Resource classification and filtering",
+        "dataVisualization": "Statistical data visualization",
+        "exportFormats": "Export JSON/CSV formats"
+      }
+    },
+    "deployment": {
+      "title": "Deployment Guide",
+      "subtitle": "How to deploy the project to production environment",
+      "vercelDeployment": "Vercel Deployment (Recommended)",
+      "netlifyDeployment": "Netlify Deployment",
+      "dockerDeployment": "Docker Deployment",
+      "vercelDescription": "Vercel is the native deployment platform for Next.js, providing the best performance and experience.",
+      "netlifyDescription": "Netlify also provides excellent static website hosting services.",
+      "dockerDescription": "Deploy using Docker containerization.",
+      "steps": "Steps:",
+      "buildSettings": "Build Settings:",
+      "dockerfile": "Dockerfile:",
+      "buildAndRun": "Build and Run:",
+      "cliDeployment": "CLI Deployment:",
+      "deploymentSteps": {
+        "pushToGithub": "1. Push code to GitHub repository",
+        "importProject": "2. Import project in Vercel",
+        "configureEnv": "3. Configure environment variables (if needed)",
+        "deploy": "4. Click deploy"
+      }
+    },
+    "configuration": {
+      "title": "Configuration Guide",
+      "subtitle": "Description of various configuration files and options in the project",
+      "i18nConfig": "Internationalization Configuration",
+      "nextjsConfig": "Next.js Configuration",
+      "tailwindConfig": "Tailwind CSS Configuration",
+      "configFile": "Configuration File:",
+      "addNewLanguage": "Adding New Language:",
+      "languageSteps": {
+        "step1": "1. Add new language file in messages/ directory",
+        "step2": "2. Update locales array in middleware.ts",
+        "step3": "3. Add new option in LanguageSwitcher component"
+      }
+    }
   }
 } 

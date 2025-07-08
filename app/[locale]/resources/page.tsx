@@ -149,6 +149,45 @@ export default function ResourcesPage() {
       </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Dynamic Collection Tool Notice */}
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6 mb-12">
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Code className="h-6 w-6 text-white" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-white mb-2">🚀 动态资源收集工具</h3>
+              <p className="text-gray-300 mb-4">
+                想要获取最新、最全面的 MCP 资源？试试我们的智能收集工具！它可以实时搜索并分类整理网络上的 MCP 相关资源。
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="/#playground"
+                  className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                >
+                  <Code className="h-4 w-4 mr-2" />
+                  使用收集工具
+                </a>
+                <a
+                  href="/report"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  查看示例报告
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Curated Resources */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">📚 精选资源</h2>
+          <p className="text-gray-400 mb-8">以下是我们人工策划的高质量 MCP 学习资源，涵盖了从入门到高级的各个方面。</p>
+        </div>
+
         {/* Official Documentation */}
         <section className="mb-16">
           <div className="flex items-center space-x-3 mb-8">

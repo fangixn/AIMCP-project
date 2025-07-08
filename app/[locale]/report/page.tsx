@@ -39,59 +39,73 @@ const MCPReportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
 
-  // 从 URL 参数或 localStorage 获取数据
+  // 从 localStorage 获取数据
   useEffect(() => {
-    // 这里可以从 URL 参数、localStorage 或 API 获取报告数据
-    // 暂时使用模拟数据
-    const mockData: ReportData = {
-      resources: [
-        {
-          title: "Model Context Protocol 官方文档",
-          url: "https://modelcontextprotocol.io",
-          type: "documentation",
-          description: "MCP 的官方技术文档和协议规范",
-          date_found: new Date().toISOString(),
-          source: "官方",
-          tags: ["official", "documentation", "protocol"],
-          language: "en",
-          rating: 5
-        },
-        {
-          title: "MCP 服务器开发教程",
-          url: "https://example.com/tutorial",
-          type: "tutorial",
-          description: "如何创建和部署 MCP 服务器的完整指南",
-          date_found: new Date().toISOString(),
-          source: "Community",
-          tags: ["tutorial", "server", "development"],
-          language: "zh",
-          rating: 4
-        },
-        {
-          title: "Anthropic MCP SDK",
-          url: "https://github.com/anthropics/mcp-sdk",
-          type: "tool",
-          description: "官方 MCP 软件开发工具包",
-          date_found: new Date().toISOString(),
-          source: "GitHub",
-          tags: ["sdk", "python", "typescript", "official"],
-          language: "en",
-          rating: 5
-        }
-      ],
-      stats: {
-        total_resources: 3,
-        by_type: { documentation: 1, tutorial: 1, tool: 1 },
-        by_source: { "官方": 1, "Community": 1, "GitHub": 1 },
-        by_language: { en: 2, zh: 1 },
-        top_tags: { official: 2, tutorial: 1, documentation: 1, protocol: 1, server: 1, development: 1, sdk: 1, python: 1, typescript: 1 }
-      },
-      collected_at: new Date().toISOString()
-    };
+    try {
+      const savedData = localStorage.getItem('mcpCollectionData');
+      if (savedData) {
+        const parsedData = JSON.parse(savedData);
+        setReportData({
+          resources: parsedData.resources,
+          stats: parsedData.stats,
+          collected_at: parsedData.timestamp || new Date().toISOString()
+        });
+      } else {
+        // 如果没有收集的数据，使用示例数据
+        const exampleData: ReportData = {
+          resources: [
+            {
+              title: "Model Context Protocol - Official Documentation",
+              url: "https://modelcontextprotocol.io/introduction",
+              type: "documentation",
+              description: "Official documentation for the Model Context Protocol (MCP), providing comprehensive guides and API references.",
+              date_found: new Date().toISOString(),
+              source: "Official",
+              tags: ["official", "documentation", "protocol", "anthropic"],
+              language: "en",
+              rating: 5
+            },
+            {
+              title: "MCP 终极指南 - 中文教程",
+              url: "https://guangzhengli.com/blog/zh/model-context-protocol",
+              type: "tutorial",
+              description: "详细的中文 MCP 教程，涵盖概念、实现和最佳实践。",
+              date_found: new Date().toISOString(),
+              source: "Community",
+              tags: ["chinese", "tutorial", "comprehensive", "guide"],
+              language: "zh",
+              rating: 4
+            },
+            {
+              title: "MCP Server SDK - Python",
+              url: "https://github.com/modelcontextprotocol/python-sdk",
+              type: "tool",
+              description: "Official Python SDK for building MCP servers with comprehensive examples.",
+              date_found: new Date().toISOString(),
+              source: "GitHub",
+              tags: ["python", "sdk", "server", "official"],
+              language: "en",
+              rating: 5
+            }
+          ],
+          stats: {
+            total_resources: 3,
+            by_type: { documentation: 1, tutorial: 1, tool: 1 },
+            by_source: { "Official": 1, "Community": 1, "GitHub": 1 },
+            by_language: { en: 2, zh: 1 },
+            top_tags: { official: 2, tutorial: 1, documentation: 1, protocol: 1, server: 1, sdk: 1, python: 1 }
+          },
+          collected_at: new Date().toISOString()
+        };
 
-    setReportData(mockData);
-    setFilteredResources(mockData.resources);
-    setLoading(false);
+        setReportData(exampleData);
+        setFilteredResources(exampleData.resources);
+      }
+    } catch (error) {
+      console.error('Error loading report data:', error);
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   // 过滤资源

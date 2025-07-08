@@ -38,8 +38,8 @@
     }
   },
   "playground": {
-    "title": "MCP 交互体验",
-    "subtitle": "通过我们的交互式演示体验 MCP 的强大功能。上传文档、配置上下文，选择模型来观看 MCP 的实际运作。",
+    "title": "MCP 资源收集工具",
+    "subtitle": "智能搜索和收集 MCP 相关资源，生成详细的分析报告",
     "documentUpload": {
       "title": "文档上传",
       "description": "上传和处理各种文档格式，为 AI 模型建立丰富的上下文"
@@ -123,5 +123,105 @@
     "resources": "学习资源", 
     "community": "社区",
     "copyright": "© 2025 AIMCP. 保留所有权利。"
+  },
+  "docs": {
+    "title": "技术文档",
+    "subtitle": "AIMCP 项目完整技术指南",
+    "navigation": "文档导航",
+    "gettingStarted": {
+      "title": "快速开始",
+      "subtitle": "按照以下步骤快速设置和运行 AIMCP 项目",
+      "systemRequirements": "系统要求",
+      "installationSteps": "安装步骤",
+      "step1": "1. 克隆项目仓库：",
+      "step2": "2. 安装依赖：",
+      "step3": "3. 启动开发服务器：",
+      "step4": "4. 在浏览器中访问：",
+      "requirements": {
+        "nodejs": "Node.js 18.0 或更高版本",
+        "npm": "npm 或 yarn 包管理器",
+        "git": "Git 版本控制",
+        "browser": "现代浏览器（Chrome、Firefox、Safari、Edge）"
+      }
+    },
+    "architecture": {
+      "title": "项目架构",
+      "subtitle": "了解 AIMCP 项目的技术架构和组件设计",
+      "techStack": "技术栈",
+      "directoryStructure": "目录结构",
+      "frontend": "前端框架",
+      "uiComponents": "UI 组件",
+      "i18n": "国际化",
+      "devTools": "开发工具",
+      "i18nSupport": "中英双语支持",
+      "dynamicRoutes": "动态路由"
+    },
+    "api": {
+      "title": "API 文档",
+      "subtitle": "详细的 API 接口说明和使用示例",
+      "mcpCollectApi": "MCP 资源收集 API",
+      "progressApi": "进度查询 API",
+      "startCollection": "启动 MCP 资源收集任务",
+      "queryProgress": "查询收集任务进度",
+      "requestParams": "请求参数：",
+      "responseExample": "响应示例：",
+      "queryParams": "查询参数：",
+      "taskStarted": "收集任务已启动",
+      "estimatedTime": "2-5 分钟",
+      "currentStep": "正在收集 GitHub 资源...",
+      "resourcesFound": "个资源",
+      "timeRemaining": "1 分钟"
+    },
+    "components": {
+      "title": "组件文档",
+      "subtitle": "项目中主要 React 组件的使用说明",
+      "mcpCollectorTool": "MCP 资源收集工具的主要组件",
+      "languageSwitcher": "语言切换组件",
+      "features": "功能特性：",
+      "supportedLanguages": "支持的语言：",
+      "usageExample": "使用示例：",
+      "featuresList": {
+        "customKeywords": "自定义搜索关键词",
+        "realTimeProgress": "实时进度显示",
+        "resourceFiltering": "资源分类和筛选",
+        "dataVisualization": "统计数据可视化",
+        "exportFormats": "导出 JSON/CSV 格式"
+      }
+    },
+    "deployment": {
+      "title": "部署指南",
+      "subtitle": "如何将项目部署到生产环境",
+      "vercelDeployment": "Vercel 部署（推荐）",
+      "netlifyDeployment": "Netlify 部署",
+      "dockerDeployment": "Docker 部署",
+      "vercelDescription": "Vercel 是 Next.js 的原生部署平台，提供最佳的性能和体验。",
+      "netlifyDescription": "Netlify 也提供了优秀的静态网站托管服务。",
+      "dockerDescription": "使用 Docker 容器化部署。",
+      "steps": "步骤：",
+      "buildSettings": "构建设置：",
+      "dockerfile": "Dockerfile：",
+      "buildAndRun": "构建和运行：",
+      "cliDeployment": "命令行部署：",
+      "deploymentSteps": {
+        "pushToGithub": "1. 将代码推送到 GitHub 仓库",
+        "importProject": "2. 在 Vercel 中导入项目",
+        "configureEnv": "3. 配置环境变量（如需要）",
+        "deploy": "4. 点击部署"
+      }
+    },
+    "configuration": {
+      "title": "配置说明",
+      "subtitle": "项目的各种配置文件和选项说明",
+      "i18nConfig": "国际化配置",
+      "nextjsConfig": "Next.js 配置",
+      "tailwindConfig": "Tailwind CSS 配置",
+      "configFile": "配置文件：",
+      "addNewLanguage": "添加新语言：",
+      "languageSteps": {
+        "step1": "1. 在 messages/ 目录添加新的语言文件",
+        "step2": "2. 更新 middleware.ts 中的 locales 数组",
+        "step3": "3. 在 LanguageSwitcher 组件中添加新选项"
+      }
+    }
   }
 } 
