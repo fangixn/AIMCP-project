@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MCP Agent - 专业的 Model Context Protocol 信息收集工具，助力开发者掌握 MCP 生态">
+    <meta name="keywords" content="MCP, Model Context Protocol, Anthropic, Claude, AI, 开发工具">
+    <title>MCP Agent - Model Context Protocol 信息收集工具</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0f172a">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Chart.js for analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🤖</span>
+                <span class="brand-text">MCP Agent</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">首页</a>
+                <a href="#features" class="nav-link">功能</a>
+                <a href="#demo" class="nav-link">演示</a>
+                <a href="#resources" class="nav-link">资源</a>
+                <a href="#download" class="nav-link">下载</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="highlight">MCP Agent</span><br>
+                        智能信息收集工具
+                    </h1>
+                    <p class="hero-subtitle">
+                        专业的 Model Context Protocol 资源收集代理<br>
+                        助力开发者全面掌握 MCP 生态系统
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">收集资源</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">资源类型</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">多语言</span>
+                            <span class="stat-label">内容支持</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary">
+                            <span>立即下载</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                        </a>
+                        <a href="#demo" class="btn btn-secondary">
+                            <span>在线演示</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5,3 19,12 5,21 5,3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-controls">
+                                <span class="control red"></span>
+                                <span class="control yellow"></span>
+                                <span class="control green"></span>
+                            </div>
+                            <div class="terminal-title">MCP Agent</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">python mcp_agent.py</span>
+                            </div>
+                            <div class="terminal-output">
+                                <div class="output-line">🔍 开始收集 MCP 相关资源...</div>
+                                <div class="output-line">📊 发现 125 个教程资源</div>
+                                <div class="output-line">🔧 发现 89 个工具项目</div>
+                                <div class="output-line">📚 发现 67 个文档资源</div>
+                                <div class="output-line">✅ 收集完成！共收集 328 个资源</div>
+                                <div class="output-line">📊 生成 HTML 报告...</div>
+                                <div class="terminal-cursor">_</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">核心功能</h2>
+                <p class="section-subtitle">强大的 MCP 资源收集和管理能力</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">多源信息收集</h3>
+                    <p class="feature-description">
+                        自动搜索网页、GitHub 等平台，收集最新的 MCP 相关教程、工具和资源
+                    </p>
+                    <ul class="feature-list">
+                        <li>DuckDuckGo 网页搜索</li>
+                        <li>GitHub 项目收集</li>
+                        <li>多语言内容支持</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">智能分类系统</h3>
+                    <p class="feature-description">
+                        基于 AI 算法自动将收集的资源进行精准分类，提高信息查找效率
+                    </p>
+                    <ul class="feature-list">
+                        <li>8+ 种资源类型</li>
+                        <li>自动标签提取</li>
+                        <li>质量评分机制</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">可视化报告</h3>
+                    <p class="feature-description">
+                        生成精美的 HTML 报告，支持筛选、搜索和统计分析功能
+                    </p>
+                    <ul class="feature-list">
+                        <li>交互式网页报告</li>
+                        <li>实时筛选功能</li>
+                        <li>统计图表展示</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏷️</div>
+                    <h3 class="feature-title">智能标签系统</h3>
+                    <p class="feature-description">
+                        自动提取技术栈和主题标签，快速定位相关资源和工具
+                    </p>
+                    <ul class="feature-list">
+                        <li>技术栈标签</li>
+                        <li>MCP 专用标签</li>
+                        <li>相关性评分</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">高效去重</h3>
+                    <p class="feature-description">
+                        智能去重算法确保资源库的质量，避免重复内容干扰
+                    </p>
+                    <ul class="feature-list">
+                        <li>URL 去重检测</li>
+                        <li>内容相似度分析</li>
+                        <li>质量优先策略</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3 class="feature-title">易于定制</h3>
+                    <p class="feature-description">
+                        开源代码，支持自定义搜索关键词和分类规则，适应不同需求
+                    </p>
+                    <ul class="feature-list">
+                        <li>自定义搜索词</li>
+                        <li>灵活配置选项</li>
+                        <li>插件式架构</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">在线演示</h2>
+                <p class="section-subtitle">体验 MCP Agent 的强大功能</p>
+            </div>
+            <div class="demo-content">
+                <div class="demo-controls">
+                    <button class="demo-btn active" data-demo="search">搜索演示</button>
+                    <button class="demo-btn" data-demo="classify">分类演示</button>
+                    <button class="demo-btn" data-demo="report">报告演示</button>
+                </div>
+                <div class="demo-display">
+                    <div class="demo-panel active" id="demo-search">
+                        <div class="demo-terminal">
+                            <div class="demo-header">搜索 MCP 资源</div>
+                            <div class="demo-body">
+                                <div class="search-results">
+                                    <div class="result-item">
+                                        <div class="result-type tutorial">TUTORIAL</div>
+                                        <div class="result-title">Model Context Protocol 完整教程</div>
+                                        <div class="result-url">https://medium.com/@example/mcp-tutorial</div>
+                                        <div class="result-tags">
+                                            <span class="tag">python</span>
+                                            <span class="tag">mcp-server</span>
+                                            <span class="tag">anthropic</span>
+                                        </div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-type tool">TOOL</div>
+                                        <div class="result-title">MCP Server SDK</div>
+                                        <div class="result-url">https://github.com/anthropics/mcp-sdk</div>
+                                        <div class="result-tags">
+                                            <span class="tag">typescript</span>
+                                            <span class="tag">sdk</span>
+                                            <span class="tag">official</span>
+                                        </div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-type documentation">DOCS</div>
+                                        <div class="result-title">MCP 官方文档</div>
+                                        <div class="result-url">https://modelcontextprotocol.io</div>
+                                        <div class="result-tags">
+                                            <span class="tag">official</span>
+                                            <span class="tag">documentation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-panel" id="demo-classify">
+                        <div class="classification-chart">
+                            <canvas id="classificationChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="demo-panel" id="demo-report">
+                        <div class="report-preview">
+                            <div class="report-header">
+                                <h3>MCP 资源收集报告</h3>
+                                <div class="report-stats">
+                                    <div class="stat">总资源: 328</div>
+                                    <div class="stat">教程: 125</div>
+                                    <div class="stat">工具: 89</div>
+                                </div>
+                            </div>
+                            <div class="report-filters">
+                                <button class="filter-btn active">全部</button>
+                                <button class="filter-btn">教程</button>
+                                <button class="filter-btn">工具</button>
+                                <button class="filter-btn">文档</button>
+                            </div>
+                            <div class="report-grid">
+                                <div class="report-card">
+                                    <div class="card-type">Tutorial</div>
+                                    <div class="card-title">MCP 开发指南</div>
+                                    <div class="card-desc">完整的 MCP 服务器开发教程...</div>
+                                </div>
+                                <div class="report-card">
+                                    <div class="card-type">Tool</div>
+                                    <div class="card-title">MCP Client</div>
+                                    <div class="card-desc">官方 MCP 客户端库...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">MCP 资源生态</h2>
+                <p class="section-subtitle">探索丰富的 MCP 开发资源</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <div class="category-header">
+                        <div class="category-icon">📚</div>
+                        <h3 class="category-title">教程文档</h3>
+                        <span class="category-count">125+</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="#" class="resource-item">
+                            <span class="item-title">MCP 快速入门</span>
+                            <span class="item-source">官方文档</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <span class="item-title">服务器开发指南</span>
+                            <span class="item-source">DataCamp</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <span class="item-title">客户端集成教程</span>
+                            <span class="item-source">Medium</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="resource-category">
+                    <div class="category-header">
+                        <div class="category-icon">🔧</div>
+                        <h3 class="category-title">开发工具</h3>
+                        <span class="category-count">89+</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="#" class="resource-item">
+                            <span class="item-title">MCP SDK (Python)</span>
+                            <span class="item-source">Anthropic</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <span class="item-title">MCP SDK (TypeScript)</span>
+                            <span class="item-source">Anthropic</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <span class="item-title">MCP Server Templates</span>
+                            <span class="item-source">GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="resource-category">
+                    <div class="category-header">
+                        <div class="category-icon">🔌</div>
+                        <h3 class="category-title">集成服务</h3>
+                        <span class="category-count">67+</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="#" class="resource-item">
+                            <span class="item-title">GitHub 集成</span>
+                            <span class="item-source">官方</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <span class="item-title">Slack 集成</span>
+                            <span class="item-source">官方</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <span class="item-title">数据库连接器</span>
+                            <span class="item-source">社区</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="resource-category">
+                    <div class="category-header">
+                        <div class="category-icon">💡</div>
+                        <h3 class="category-title">示例项目</h3>
+                        <span class="category-count">156+</span>
+                    </div>
+                    <div class="category-items">
+                        <a href="#" class="resource-item">
+                            <span class="item-title">天气服务器</span>
+                            <span class="item-source">示例</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <span class="item-title">数据库查询器</span>
+                            <span class="item-source">示例</span>
+                        </a>
+                        <a href="#" class="resource-item">
+                            <span class="item-title">文件管理器</span>
+                            <span class="item-source">示例</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-info">
+                    <h2 class="download-title">开始使用 MCP Agent</h2>
+                    <p class="download-subtitle">
+                        立即下载并开始收集 MCP 资源，加速你的开发进程
+                    </p>
+                    <div class="download-features">
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>开源免费使用</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>支持 Python 3.7+</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>跨平台兼容</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            <span>持续更新维护</span>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="/mcp_agent.py" class="btn btn-primary" download>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            下载 Python 脚本
+                        </a>
+                        <a href="https://github.com/your-username/mcp-agent" class="btn btn-secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            GitHub 仓库
+                        </a>
+                    </div>
+                </div>
+                <div class="download-code">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-title">快速安装</span>
+                            <button class="copy-btn" onclick="copyCode()">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="code-content">
+                            <pre><code id="install-code"># 1. 下载脚本
+wget https://your-domain.com/mcp_agent.py
+
+# 2. 安装依赖
+pip install requests duckduckgo-search
+
+# 3. 运行收集器
+python mcp_agent.py
+
+# 4. 查看结果
+open mcp_data/mcp_report_*.html</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-logo">
+                        <span class="brand-icon">🤖</span>
+                        <span class="brand-text">MCP Agent</span>
+                    </div>
+                    <p class="brand-description">
+                        专业的 Model Context Protocol 信息收集工具
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4 class="link-title">产品</h4>
+                        <a href="#features" class="footer-link">功能特性</a>
+                        <a href="#demo" class="footer-link">在线演示</a>
+                        <a href="#download" class="footer-link">下载使用</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 class="link-title">资源</h4>
+                        <a href="#" class="footer-link">使用文档</a>
+                        <a href="#" class="footer-link">API 参考</a>
+                        <a href="#" class="footer-link">示例代码</a>
+                    </div>
+                    <div class="link-group">
+                        <h4 class="link-title">社区</h4>
+                        <a href="#" class="footer-link">GitHub</a>
+                        <a href="#" class="footer-link">问题反馈</a>
+                        <a href="#" class="footer-link">贡献指南</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 MCP Agent. 基于 MIT 许可证开源.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

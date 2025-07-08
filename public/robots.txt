@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aimcpweb.com/sitemap.xml
+
+# Block common non-content paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /*.json$
+
+# Allow search engines to crawl all language versions
+Allow: /en/
+Allow: /zh/
+
+# Crawl delay (optional, adjust based on server capacity)
+Crawl-delay: 1

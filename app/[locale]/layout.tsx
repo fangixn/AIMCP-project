@@ -27,6 +27,17 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }
+    ],
+    apple: '/apple-touch-icon.png',
+    shortcut: '/favicon.svg'
+  },
+  manifest: '/site.webmanifest',
+  themeColor: '#0f172a',
   openGraph: {
     title: 'AIMCP - AI Model Context Protocol',
     description: 'Making AI context understanding possible through standardized protocols and collaborative architectures.',

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { ChevronDown, Code, Database, Zap, FileText, Users, ExternalLink, Menu, X, Play, BookOpen, MessageSquare, HelpCircle, Globe } from 'lucide-react';
 import LanguageSwitcher from '../../components/LanguageSwitcher';
+import MCPCollectorTool from '../../components/MCPCollectorTool';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -165,49 +166,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Playground Section */}
+      {/* MCP Collector Tool Section */}
       <section id="playground" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t('playground.title')}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">MCP 资源收集工具</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              {t('playground.subtitle')}
+              智能搜索和收集 MCP 相关资源，生成详细的分析报告
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-900/20 to-green-900/20 p-8 rounded-2xl border border-gray-700">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText className="h-10 w-10 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{t('playground.documentUpload.title')}</h3>
-                <p className="text-gray-300">{t('playground.documentUpload.description')}</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-20 h-20 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Database className="h-10 w-10 text-green-400" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{t('playground.contextConfiguration.title')}</h3>
-                <p className="text-gray-300">{t('playground.contextConfiguration.description')}</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-20 h-20 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="h-10 w-10 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{t('playground.modelSelection.title')}</h3>
-                <p className="text-gray-300">{t('playground.modelSelection.description')}</p>
-              </div>
-            </div>
-
-            <div className="text-center mt-12">
-              <button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-12 py-4 rounded-lg font-semibold transition-all duration-200 shadow-lg hover:shadow-xl">
-                {t('playground.launchPlayground')}
-              </button>
-            </div>
-          </div>
+          <MCPCollectorTool />
         </div>
       </section>
 
